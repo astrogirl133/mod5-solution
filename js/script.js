@@ -150,6 +150,7 @@ dc.loadMenuCategories = function () {
 // Load the menu items view
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
+  console.log(categoryShort);
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     menuItemsUrl + categoryShort,
@@ -216,7 +217,6 @@ function buildCategoriesViewHtml(categories,
 // Builds HTML for the single category page based on the data
 // from the server
 function buildAndShowMenuItemsHTML (categoryMenuItems) {
-  console.log(categoryMenuItems);
   // Load title snippet of menu items page
   $ajaxUtils.sendGetRequest(
     menuItemsTitleHtml,
