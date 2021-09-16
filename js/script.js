@@ -224,6 +224,7 @@ function buildAndShowMenuItemsHTML (categoryMenuItems) {
           // Switch CSS class active to menu button
           switchMenuToActive();
 
+          console.log(categoryMenuItems);
           var menuItemsViewHtml =
             buildMenuItemsViewHtml(categoryMenuItems,
                                    menuItemsTitleHtml,
@@ -241,7 +242,6 @@ function buildAndShowMenuItemsHTML (categoryMenuItems) {
 function buildMenuItemsViewHtml(categoryMenuItems,
                                 menuItemsTitleHtml,
                                 menuItemHtml) {
-  console.log(categoryMenuItems.menu_items);
   menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "name",
